@@ -1,0 +1,2122 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&display=swap');
+@import url(normalize.css);
+@import url(lightbox.min.css);
+@import url(all.css);
+@import url(flickity.min.css);
+@import url(timeline.css);
+
+/*allgemeine regeln*/
+
+/*.loop-wrapper {
+  background: #009688;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-bottom: 3px solid #fff;
+  color: #fff;
+}*/
+.knopka{
+  z-index:3;
+}
+
+
+
+
+
+
+
+/*@keyframes tree {
+  0%   { transform: translate(1350px); }
+  100% { transform: translate(-950px); }
+}*/
+
+/*
+@keyframes tree {
+0%   { transform: translate(1350px); }
+25%{transform: translatey(-350px);transform: rotate(60deg) }
+27%{transform: translatey(-350px);transform: rotate(60deg) }
+35%{transform: translatey(-350px);transform: rotate(0deg) }
+100% { transform: translate(-950px); }
+}*/
+
+@keyframes tree {
+  0% {
+		transform: translate(950px, -550px) rotate(-55deg); }
+  /*  10% {transform: rotate(-55deg);}*/
+  11%{
+		transform: translate(0px, -120px) rotate(-0deg);
+	}
+  /*12% {transform: rotate(-0deg);}*/
+	100% {
+		transform: translate(-950px, -120px);
+	}
+}
+
+
+/*@keyframes tree1 {
+  0% {
+		transform: rotate(-60deg); }
+ 
+
+  50%{
+		transform: rotate(0deg); ;
+	}
+  100% {
+    transform: rotate(0deg); ;
+	}
+	
+}*/
+
+
+
+.snowfall{
+  background: url(https://i.imgur.com/T0mBFg2.png);
+  background-size: 350px 200px;
+  background-repeat: repeat;
+  height: 100%;
+  width:100%;
+  position:relative;
+  
+  
+  z-index:100000;
+
+  /*border-radius: 50%;
+  top:100px;*/
+  animation:snowfall 5s linear forwards infinite; 
+  -webkit-animation:snowfall 5s linear forwards infinite; 
+}
+@keyframes snowfall{
+  0%{
+    background-position: 0 0;
+  }
+  20%{
+    background-position: 20px 20px;
+  }
+  40%{
+    background-position: 40px 40px;
+  }
+  60%{
+    background-position: 60px 60px;
+  }
+  80%{
+    background-position: 80px 80px;
+  }
+  100%{
+    background-position: 100px 100px;
+  }
+}
+@-webkit-keyframes snowfall{
+  0%{
+    background-position: 0 0;
+  }
+  20%{
+    background-position: 20px 20px;
+  }
+  40%{
+    background-position: 40px 40px;
+  }
+  60%{
+    background-position: 60px 60px;
+  }
+  80%{
+    background-position: 80px 80px;
+  }
+  100%{
+    background-position: 100px 100px;
+  }
+}
+  
+  
+  
+  /***/
+  
+ 
+
+
+*{
+    box-sizing:border-box;
+}
+
+*:active, *:focus{
+    outline: none;
+    outline:0;
+  }
+
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1em;
+    position: relative;
+}
+
+html,body {
+    overflow-x: hidden;
+    width:100%;
+      position:relative;
+   
+}
+
+h2, h1{
+font-family: 'Open Sans', sans-serif;
+text-align:center;
+font-size:2em;
+margin:10px auto 30px auto;
+}
+
+a{
+    text-decoration:none;
+  
+}
+
+ul, ol{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+}
+.innerbox{
+    max-width:980px;
+    margin:0 auto;
+    padding: 20px 2%;
+}
+
+
+
+.main_h {
+    position: fixed;
+    top: -100px;
+    left:0;
+    max-height: 70px;
+    overflow: hidden;
+    z-index: 1000;
+    width: 100%;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  
+  }
+  /*
+  header{
+    background-color: #C9B218;  
+    padding:0px 2%;
+    font-size: 1em;
+width:100%;
+    text-transform: uppercase;
+
+}*/
+
+header nav, header nav {
+        text-align:center;
+    }
+
+header nav ul li {
+        display: inline-block;
+        margin-right:0.312em;
+       
+    }
+header nav ul li:first-child {
+        margin-left: 0;
+      }
+
+header nav ul li a{
+    color: #3f3b35;
+    display:block;
+    width:115px;
+    line-height:30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+        }
+
+
+ header nav ul li a:hover{
+font-weight: 700;
+
+}
+
+  .sticky {
+    background-color: #C9B218;  
+    opacity: 1;
+    top: 0px;
+    border-bottom: 1px solid #3f3b35;
+
+  
+  }
+  
+  
+  /*Nur in der mobilen Ansicht erscheint der toggle(Hamburger-Icon-Menu). Wenn man anklickt wird das navigation-menu auf/zu geklappt */
+  .open-nav {
+    max-height: 400px !important;
+    background-color: red;
+  }
+  .open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+  }
+  
+ 
+  /* 
+  mobile-toggle
+  Generieren und Positionieren des Hamburger-Icons in der mobilen Ansicht
+  */
+  .mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 1.3em;
+    top: 1em;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+  }
+  
+  .mobile-toggle span {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: #3f3b35;
+    display: block;
+  }
+
+
+  
+  
+/*BUTTONS*/
+
+#scroll-to-top{
+    position:fixed;  
+    background-color:#C9B218;
+    right:100px;
+    bottom:100px;
+    color:#fff;
+    font-size:3em;
+    padding:2px 10px;
+   border:1px solid #fff;
+   -webkit-transition: all 0.5s ease-in-out;
+   transition: all 0.5s ease-in-out; 
+   z-index:10002;
+
+  }
+  #scroll-to-top:hover{
+    color:#2b2823;
+}
+
+   #coffee #scroll-to-top, #candles #scroll-to-top{
+       color:#3f3b35;
+       border:1px solid #3f3b35;
+   }
+
+   .knopka{
+
+    margin:15px 15px 30px 15px;
+    padding:0.9375em;
+    text-align:center;
+    display: block;
+    width:120px;
+    color:#ffffff;
+    background:#928d87;
+    -webkit-transition: all 0.5s ease-in-out;
+ -moz-transition: all 0.5s ease-in-out;
+ -ms-transition: all 0.5s ease-in-out;
+ -o-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+   }
+
+   .knopka:hover{
+    color:#3f3b35;
+    background-color: #C9B218;
+    font-weight: 700;
+   }
+
+   .cvknopka{
+    margin:15px 15px 30px 15px;
+    padding:0.9375em;
+    text-align:center;
+    display: block;
+    width:120px;
+    color:#ffffff;
+    background:#928d87;
+    -webkit-transition: all 0.5s ease-in-out;
+ -moz-transition: all 0.5s ease-in-out;
+ -ms-transition: all 0.5s ease-in-out;
+ -o-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+   }
+
+   .cvknopka:hover{
+    color:#3f3b35;
+    background-color: #C9B218;
+    font-weight: 700;
+   }
+
+   .flickity-prev-next-button.previous{
+    background-color: rgba(243, 230, 230, 0.1);
+}       
+.flickity-prev-next-button.next{
+    background-color: rgba(243, 230, 230, 0.1);
+}  
+/*COLORING*/
+
+.hell{
+    background-color:#e2d9d9; 
+}
+ .dunkel{
+    background-color:#2b2823;
+    color:#f5f1ec;
+}
+
+.gelb{
+    background-color: #C9B218;
+    color:#2b2823;
+    
+}
+
+/* INDEX*/
+
+ 
+/*TYPING DEMO*/
+
+.wrapper {
+    height: 10vh;
+    /*This part is important for centering*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .typing-demo {
+    width: 35ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size:1.1em;
+font-family: 'open sans', sans-serif;
+font-weight: 500;
+letter-spacing: 8px;
+
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0%;
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+ /*hero*/
+ #hero{
+   
+  
+    height: 100vh;  
+    background: rgb(0, 0, 0) url(../bilderhintergrund/3-min.jpg) no-repeat fixed center center; /*center center oder center top oder center bottom*/
+    background-size: cover; 
+    position:relative;
+    filter: contrast(1.5);}
+
+   
+    
+    
+    .parent{
+       
+        height: 40vh;  
+        overflow: hidden;
+    }
+    #hero1{
+        width: 100%;
+      height: 100%;
+        background: rgb(32, 23, 23) url(../bilderhintergrund/3-min.jpg) no-repeat center center fixed; /*center center oder center top oder center bottom*/ 
+        position:relative;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;  
+        }
+    
+     .parent:hover #hero1, .parent:hover #hero2, .parent:hover #hero3, .parent:hover #hero4,.parent:hover #hero5,.parent:hover #hero6, .parent:hover #hero7,
+    .parent:focus #hero1, .parent:focus #hero2, .parent:focus #hero3, .parent:focus #hero4, .parent:focus #hero5, .parent:focus #hero6, .parent:focus #hero7{
+      transform: scale(1.2);
+    }
+    
+    
+    #hero2{
+            background: rgb(32, 23, 23) url(../bilderhintergrund/2-min.jpg) no-repeat center bottom fixed; /*center center oder center top oder center bottom*/  
+            background-size: cover; 
+            position:relative;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;  
+        }
+     
+        #hero3{
+            background: rgb(32, 23, 23) url(../bilderhintergrund/3-min.jpg) no-repeat center bottom fixed; /*center center oder center top oder center bottom*/  
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;  
+            background-size: cover; 
+            position:relative;
+        }
+    
+        #hero4{
+            background: rgb(32, 23, 23) url(../bilderhintergrund/4-min.jpg) no-repeat center bottom fixed; /*center center oder center top oder center bottom*/  
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;  
+            background-size: cover; 
+            position:relative;
+        }
+    
+        
+        #hero5{
+            background: rgb(32, 23, 23) url(../bilderhintergrund/5-min.jpg) no-repeat center bottom fixed; /*center center oder center top oder center bottom*/  
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;  
+            background-size: cover; 
+            position:relative;
+        }
+        #hero6{
+            background: rgb(32, 23, 23) url(../bilderhintergrund/6-min.jpg) no-repeat center bottom fixed; /*center center oder center top oder center bottom*/  
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;  
+            background-size: cover; 
+            position:relative;
+        }
+        #hero7{
+            background: rgb(32, 23, 23) url(../bilderhintergrund/7-min.jpg) no-repeat center bottom fixed; /*center center oder center top oder center bottom*/  
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;  
+            background-size: cover; 
+            position:relative;
+        }
+    
+     
+    
+    #hero h1{
+       color:rgba(255, 255, 255, 1);
+       position:absolute;
+       top:50%;
+       left:50%;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    }
+    #hero h1 span.heading{
+    display:inline-block;
+    font-size:5em;
+    font-family: 'Corinthia', sans-serif;
+    font-weight: 350;
+    letter-spacing: 8px;
+    line-height: 0;
+    
+    }
+    #hero h1 span.claim{
+       display:inline-block;
+       font-size:0.8em;
+       letter-spacing: 3px;
+       font-weight: 300;
+       }
+    #herobox{
+    background:rgba(0, 0, 0, 0.4) ;
+
+    height: 100vh;    
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;   
+       }
+    
+      
+    #hero1 h1, #hero2 h1, #hero3 h1, #hero4 h1, #hero5 h1, #hero6 h1, #hero7 h1 {
+        font-size:3em;
+        letter-spacing: 5px;
+        font-family: 'Corinthia', sans-serif;
+        color: rgba(243, 230, 230, 0.8);
+        margin:0;
+        position:absolute;
+        top:50%;
+        left:50%;
+     transform:translate(-50%, -50%);
+     text-align:center;
+        }
+    
+       #herobox1{
+        background:rgba(0, 0, 0, 0.6) ;
+        height: 40vh; 
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;   
+           }
+    
+       #herobox1:hover{
+            background:rgba(0, 0, 0, 0.1) ;
+           
+               }
+    
+
+/*ABOUT*/
+
+.row{
+    overflow:hidden;
+    margin-bottom:2%;
+    padding:2px;
+}
+
+ #Index .dunkel .row{
+ overflow:hidden; 
+
+}
+
+#Index .dunkel .row li{
+    float:left;
+    width:49%;  
+    padding:40px;
+
+}
+
+#Index .dunkel .row li img{
+
+
+    margin: 5% auto;
+}
+
+
+#Index .dunkel .row li:last-child{
+   margin:0;
+}
+
+
+/*wHAT I DO*/
+.row-icons{
+    overflow:hidden;
+    padding-bottom:30px;
+
+}
+.drittel{
+    float:left;
+    width:23.5%;
+    height:340px;
+    margin-right: 2%;
+    margin-bottom:2%;
+    background: #928d87;
+    color: #2b2823;
+    text-align:center;
+    padding:20px 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.27), 0 6px 6px rgba(0,0,0,0.30);
+    -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+.drittel:last-child{
+    margin-right:0;
+}
+.drittel .iconbox{
+background:#3f3b35;
+width:100px;
+ height:100px;
+ margin-top:17px;
+ margin-bottom:5px;
+display:inline-block;
+transform:rotate(45deg);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+
+.drittel:hover .iconbox{
+    border-radius: 50%;
+    background-color: #C9B218;
+ /*#047C9B*/
+    }
+.iconbox i{
+    font-size:3.5em;
+    color: #c7c4c4;
+    margin-top:17px;
+    transform:rotate(-45deg);
+    -webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+.drittel:hover i{
+    color:#2b2823;
+}
+
+
+.drittel:hover{
+    background: #ada69b;
+    color:#2b2823;
+}
+
+
+
+.progress {
+    height: 8px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+  }
+  
+  .progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+    background-color: #C9B218;
+  }
+
+  .links-to-bars1{
+      margin-top:60px;
+  }
+ 
+
+  .bars h3{
+    padding:20px;
+    font-size: 1.9em;
+    font-weight: 300;
+color:#f0ece7;
+margin:0;
+text-align: center;
+  }
+
+  .bars label{
+      font-size: 1.1em;
+      display: block;
+      padding:3px;
+  }
+
+
+
+
+
+/*MEINE PROJEKTE*/
+.threeinarow, .projekte .twoinarow{
+overflow: hidden;
+line-height: 0;
+}
+
+.threeinarow li{
+width:32%;
+padding:0;
+margin:0;
+line-height:0; 
+float:left;
+background: rgb(7, 7, 7);
+
+}
+.projekte .twoinarow li{
+    width:50%;
+padding:0;
+margin:0;
+line-height:0; 
+float:left;
+background: rgb(7, 7, 7);
+}
+
+.threeinarow li img, .projekte .twoinarow li img{
+    width:100%;
+    opacity: 0.5;
+}
+.threeinarow li:nth-child(3), .projekte .twoinarow li:nth-child(2){
+    margin:0;
+}
+.threeinarow figure, .projekte .twoinarow figure{
+    margin:0;
+    line-height: 0;
+    position:relative;
+    overflow: hidden;
+}
+.threeinarow figcaption, .projekte .twoinarow figcaption{
+    line-height:1.5;
+    background: black;
+    color:#fff;
+    padding: 10px 10px;
+    line-height: 1.5em;
+ -webkit-transition: all 0.5s ease-in-out;
+ -moz-transition: all 0.5s ease-in-out;
+ -ms-transition: all 0.5s ease-in-out;
+ -o-transition: all 0.5s ease-in-out;
+ transition: all 0.5s ease-in-out;
+ position:absolute;
+ left:5px;
+ right:5px;
+ bottom:5px;
+ }
+
+ .threeinarow li figure img, .projekte .twoinarow li figure img{
+    width:100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    }
+    .threeinarow li figure:hover img, .projekte .twoinarow li figure:hover img{
+      
+    opacity:1;
+    transform:scale(1.5);
+    -webkit-transform:scale(1.5);
+        -moz-transform:scale(1.5);
+        -ms-transform:scale(1.5);
+        -o-transform:scale(1.5);
+  
+    }
+
+/*video*/
+.marketing{
+  line-height:1em;  
+}
+.marketing h3{
+    font-size: 1.9em;
+    font-weight: 500;
+color:#2b2823;
+margin:0;
+text-align: center;
+}
+
+.marketing p{
+    padding:10px;
+    letter-spacing: 2px;
+}
+
+.marketing .knopka{
+    color: #2b2823;
+    background-color: #C9B218;
+    display: block;
+    width:140px;
+    position:absolute;
+    left:45%;
+    top:90%;
+    transform: translate(-45% );     
+    margin-bottom: 20px;
+   
+}
+.marketing .knopka:hover{
+     background: #3f3b35; 
+     color: #e2d9d9;
+
+}
+
+.syoss{
+    display: center;
+    width:45%;
+    float:left;
+    margin:3% 1%;   
+    position:relative;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.embed-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; 
+  }
+
+  .embed-container iframe {
+    position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        filter:grayscale(1);
+  }
+
+video{
+  width:100%;
+  height:auto;
+}
+
+.embed-container iframe:hover{
+    filter:grayscale(0);
+}
+
+#webdesign-projekte{
+    overflow:hidden;
+}
+
+#webdesign-projekte .halbeweb img{
+    width:100%;
+    height:18.75em;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+}
+
+#webdesign-projekte .halbeweb:last-child{
+    margin-right: 0;
+}
+
+.halbeweb{
+   float:left;
+    width:32%;
+    margin-right:1%;
+    position: relative;
+}
+.halbeweb img{
+    width:100%;
+}
+
+.webbox{
+    position: relative;
+    overflow:hidden;
+}
+.webboxlay{
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+opacity:0.9;
+line-height: 0;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+
+}
+
+#webdesign-projekte figcaption{
+position: absolute;
+background:#3f3b35;
+opacity: 0.8;
+text-transform: uppercase;
+letter-spacing: 3px;
+color:#e2d9d9;
+text-align: center;
+padding: 20px ;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+}
+
+.halbeweb:hover .webboxlay{
+    opacity:0.4;
+}
+.halbeweb:hover img {
+scale: 1.3;
+}
+
+#webdesign-projekte .halbeweb:hover figcaption{
+   opacity: 0.0;
+    }
+
+    .description a{
+        color:#eee;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+
+      /*GALERIE VERSUCH*/
+  #korobka{
+    position:relative;
+    line-height:0;
+    }
+    #korobka h2{
+   line-height:1.5em;
+    position:absolute;
+    background:#C9B218;
+    opacity:0.7;
+    color:#2b2823;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:1;
+    padding:10px 30px;
+    margin:0;
+    }
+
+
+.ganzegalerie{
+        overflow:hidden;
+    }
+
+.ganzegalerie li {
+   float:left;
+   width:16.666%;
+   padding:0;
+   margin:0;
+   line-height: 0;
+   background: black;
+}
+.ganzegalerie li img{
+   width:100%;
+   filter: grayscale(0.9);
+   opacity: 0.4;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+
+}
+
+.ganzegalerie li img:hover{
+   opacity: 1;  
+   filter: grayscale(0.0);
+}
+  
+
+
+/*LEBENSLAUF*/
+/*
+#lebenslauf{
+  
+    height: 120vh;  
+    overflow: hidden;
+    border:1px solid green;
+   
+
+}
+
+
+
+
+.cvback{
+   width: 100%;
+  height: 100%;
+    background: rgb(32, 23, 23) url(../bilderhintergrund/herohero-min.jpg) no-repeat fixed; /*center center oder center top oder center bottom
+    position:relative; 
+    overflow:hidden;
+    border:1px solid red;
+    }
+
+
+
+    .col-md-12{
+        position: absolute;
+  
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index:999;
+        border:1px solid violet;
+margin:auto;
+    
+    }
+
+
+.cvback li{
+    float:left;
+    width:50%;
+    margin:0;
+    line-height: 0;
+    overflow: hidden;
+}
+.cvback li :last-child{
+    margin:0;
+}
+
+.cvback li:nth-child(5),  .cvback li:nth-child(6), .cvback li:nth-child(7),  .cvback li:nth-child(8), .cvback li:nth-child(9),  .cvback li:nth-child(10){
+    display: none;
+}
+
+
+.cvback img{
+width:100%;
+filter: grayscale(1);
+opacity: 0.15;
+-webkit-transition: all 0.5s ease-in-out;
+-moz-transition: all 0.5s ease-in-out;
+-ms-transition: all 0.5s ease-in-out;
+-o-transition: all 0.5s ease-in-out;
+transition: all 0.5s ease-in-out;
+
+}
+/*.cvback img:hover{
+    transform: scale(1.3);
+    }*/
+
+
+
+     
+
+
+/*footer*/
+footer{
+    background:#1f1d1c;
+    padding:120px;
+}
+
+ul#rechtliches{
+    text-align:left;
+    float:left;
+       }
+       ul#rechtliches li{
+   display:inline-block;
+   margin-right:20px;
+       }
+       ul#rechtliches li a, ul#social li a{
+         color:rgb(242, 238, 242);  
+         padding:10px;
+       }
+
+
+ ul#rechtliches li a:hover{
+    color:#2b2823;
+    background-color: #C9B218;
+    font-weight: 700;
+    }
+
+   
+   ul#social{
+   float:right;
+   text-align:right;
+
+       }
+   ul#social li{
+           display:inline-block;
+           margin-left:15px;
+
+       }
+       ul#social li i{
+           font-size:1.8em;
+           -webkit-transition: all 0.5s ease-in-out;
+           -moz-transition: all 0.5s ease-in-out;
+           -ms-transition: all 0.5s ease-in-out;
+           -o-transition: all 0.5s ease-in-out;
+           transition: all 0.5s ease-in-out;
+       }
+
+
+footer .innerbox{
+padding:0px 2%;
+}
+
+/*UNTERSEITEN*/
+    
+    #coffee #Logoexplain .Text, 
+    #candles #Logoexplain .Text, 
+    .bars, 
+    #Airtaxi #Logoexplain .Text, 
+    #drone #Logoexplain .Text {
+        width:62%;
+        float:left;
+        margin-right:2%;
+        margin-top:2%;
+        margin-bottom:2%;
+        }
+    #coffee #Logoexplain .Image, 
+    #candles #Logoexplain .Image, 
+    #Airtaxi #Logoexplain .Image, 
+    #drone #Logoexplain .Image,
+    .links-to-bars {
+            width:34%;
+            float:left;
+            }
+    #coffee #Logoexplain li:last-child, 
+    #candles #Logoexplain li:last-child,
+    #Airtaxi #Logoexplain li:last-child,
+    #drone #Logoexplain li:last-child {
+         margin-right:0%;
+            }
+    
+    .twoinarow{
+    overflow:hidden;
+     }
+    
+    #KV ul {
+     overflow:hidden; 
+    }
+    #KV ul li{
+       width:49.9%;
+       float:left;
+     }
+     #KV ul li img{
+        width:100%;
+      }
+    
+    #Umsetzung ul {
+        overflow:hidden;
+     }
+     #Umsetzung ul li, .links-to-bars1{
+        width:47%;
+        float:left;
+        margin-right:3%;
+        margin-bottom: 2%; /* margin 0 2% 2% 0*/
+      }
+      #Umsetzung ul li img{
+         width:100%;
+         height:auto;
+       }
+    
+       #Umsetzung li:last-child{
+        margin-right:0%;
+    }
+    figure{
+        line-height: 0;
+        margin:1em 5px;
+   
+    }
+    #Umsetzung figure{
+    
+        line-height: 0;
+        margin:0;
+    }
+    figcaption{
+        text-align:center;
+        line-height:1.5;
+    }
+ /*FIGURE KAUGUMMI*/
+ .figure-1{
+    position:relative;
+    margin:0;
+}
+.figure-1 img{
+    width:100%;
+  
+}
+.figure-1 figcaption{
+    width:100%;
+    height:50%;
+    background:rgba(0, 0, 0, 0.6);
+    color:#fff;
+    position:absolute;
+    left:0%;
+right:50%;
+bottom:0px;
+top:0px;
+-webkit-transition: all 0.7s ease-in-out;
+-moz-transition: all 0.7s ease-in-out;
+-ms-transition: all 0.7s ease-in-out;
+-o-transition: all 0.7s ease-in-out;
+transition: all 0.7s ease-in-out;
+}
+
+.figure-1 figcaption:hover{
+    background:rgba(0, 0, 0, 0.6);
+    color:rgb(255, 245, 245);
+    width:100%;
+    height:15%;
+}
+#candles .figure-1 figcaption:hover{
+height:18%;
+}
+
+#Airtaxi .figure-1 figcaption{
+top:50%;
+height:50%;
+}
+
+#Airtaxi .figure-1 figcaption:hover{
+top:70%;
+height:30%;
+}
+
+
+
+
+
+  
+
+
+  #contact .knopka{
+      margin:5% 45%;
+      background-color: #C9B218;
+      color: #2b2823;
+  }
+  #contact .knopka:hover{
+  font-weight: 700;
+}
+
+                     
+#contact h3 {
+ 
+
+    font-size:2.8em;
+font-family:  'Corinthia', sans-serif;
+font-weight: 300;
+letter-spacing: 2px;
+text-align: center;
+margin: 1%;
+  }
+
+
+@media 
+only screen and (max-width: 1921px) {
+
+  .cvback li:nth-child(5),  .cvback li:nth-child(6), .cvback li:nth-child(7),  .cvback li:nth-child(8), .cvback li:nth-child(9),  .cvback li:nth-child(10){
+    display: inherit;
+}  
+.gallery-cell {
+    height: 47vh;
+  }
+  .syoss{
+    display: center;
+    width:45%;
+    float:left;
+    margin:3% 1%;   
+    position:relative;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+        
+}/*ende Breakpoint bis 1920px*/
+
+
+
+
+@media 
+only screen and (max-width: 1281px) {
+
+    .gallery-cell {
+        height: 50vh;
+      }
+
+    .testimonial-quote {
+        font-size:3em;
+      }
+
+      .testimonial-author {
+        padding-top: 5px;
+        font-size: 1.1em;
+      }
+
+      .parent{
+        height:400px;
+        height: 30vh;  
+    }
+
+    #hero1 h1, #hero2 h1, #hero3 h1, #hero4 h1, #hero5 h1, #hero6 h1, #hero7 h1 {
+        top:40%;
+        }
+        .syoss{
+          display: center;
+          width:43%;
+          float:left;
+          margin:3% 1%;   
+          position:relative;
+          padding-bottom: 50px;
+          margin-bottom: 20px;
+      }
+        
+        
+      
+}/*ende Breakpoint bis 1300px*/
+
+
+@media 
+only screen and (max-width: 950px) {
+
+    header{
+        font-size: 0.9em;
+    }
+    
+    header nav, header nav {
+            margin-top: 1px;
+            margin-bottom: 1px; 
+        }
+    
+    header nav ul li, header nav ul li {
+            margin-right:1px;
+        }
+    
+    header nav ul li a{
+        width:100px;
+            }
+
+       
+            .cvback li{
+                display: none;
+            }
+
+
+
+            .cvback li:nth-child(5),  .cvback li:nth-child(6), .cvback li:nth-child(7),  .cvback li:nth-child(8), .cvback li:nth-child(9),  .cvback li:nth-child(10){
+                display: none;
+            }
+         
+
+}/*ende Breakpoint bis 950px*/
+
+@media 
+only screen and (max-width: 814px) {
+
+
+    header nav ul li a{
+        width:90px;
+            }
+
+#hero h1 span.heading{
+                font-size:4em;
+                }
+#hero h1 span.claim{
+                font-size:0.7em;
+                   }
+ #Index .dunkel .row li{
+               display:center;
+                    width:80%;  
+                    margin:5px 80px 5px 80px;
+              padding:20px;
+          
+                }
+
+
+ #Index .dunkel .row li:last-child{
+                    margin:80px;
+                 }
+
+.gallery-cell {
+                    height: 300px;
+                  }
+            
+.testimonial {
+                    padding:0 10px;
+                    margin-top:0.312em;
+                }
+
+.testimonial-quote {
+                    font-size:2em;
+                  }
+            
+ .testimonial-author {
+                    padding-top: 5px;
+                    font-size: 1.1em;
+                  }
+  .knopka{
+width:110px;
+                   }       
+ .progress {
+                    margin-bottom: 45px;
+                  }                           
+
+.drittel{
+                    float:left;
+                    height:360px;
+                }
+
+ .syoss{
+                    width:80%;
+                    margin:5% 10% 3%;   
+                    position:relative;
+
+                }
+
+.ganzegalerie li {
+                    width:33.2%;
+                 }
+ #scroll-to-top{
+                    right:5%;
+                    bottom:5%;
+                  }        
+
+
+                  #contact .knopka{
+                    margin:5% 45%;
+                    background-color: #C9B218;
+                    color: #2b2823;
+                }
+ 
+ ul#rechtliches li{
+                    margin-right:10px;
+                        }
+
+                    ul#social li{
+                            margin-left:25px;
+                        }
+                        ul#social li i{
+                            font-size:1.2em;
+                        }
+                   
+                        
+                        html, body {
+                            overflow-x: hidden;
+                            width:100%;
+                            }
+                   
+}/*ende Breakpoint bis 814px*/
+
+
+
+  @media only screen and (max-width: 769px) {
+	        
+ 
+  
+  
+    /*header*/
+              .main_h {
+                padding-top: 25px;
+         
+              }
+        
+              /*nav*/
+              nav {
+                width: 100%;
+              }
+  
+              nav ul {
+                padding-top: 10px;
+                margin-bottom: 22px;
+                float: left;
+                text-align: center;
+                width: 100%;
+              }
+  
+              nav ul li {
+                width: 100%;
+                padding: 7px 0;
+                margin: 0;
+  
+              }
+  
+              .mobile-toggle {
+                display: block;
+                /*toggle wird in der mobilen Ansicht durch display:block wieder sichtbar gamacht. Wurde in der Desktop-Ansicht erst positioniert und auch gleich ausgeblendet*/
+              }
+
+
+              #hero1 h1, #hero2 h1, #hero3 h1, #hero4 h1, #hero5 h1, #hero6 h1, #hero7 h1 {
+                font-size:2.5em;
+                letter-spacing: 3px;
+                font-family: 'Corinthia', sans-serif;
+                color: rgba(243, 230, 230, 0.8);
+                margin:0;
+                position:absolute;
+                top:50%;
+                left:50%;
+             transform:translate(-50%, -50%);
+             text-align:center;
+                }
+            
+               #herobox1{
+                height: 25vh;  
+                   }
+
+                   .parent{
+                    height: 25vh;  
+                }
+            
+                
+                #contact .knopka{
+                    margin:5% 40%;
+                    background-color: #C9B218;
+                    color: #2b2823;
+                }
+ 
+                        
+
+
+         
+  
+}/*ende Breakpoint bis 769px*/
+
+@media only screen and (max-width: 736px) {
+
+
+ 
+ #hero h1 span.heading{
+                 font-size:3em;
+                 }
+#hero h1 span.claim{
+                    font-size:0.6em;
+                    letter-spacing: 1px;
+                    }
+.gallery-cell {
+                        height: 270px;
+                      }
+                 
+    
+    .testimonial-quote {
+                        font-size:1.6em;
+                      }
+                
+     .testimonial-author {
+                        font-size: 0.9em;
+                      }
+      
+
+ .drittel{
+                            width:60%;
+                            margin: 2% 20% 2% 20%;
+                            font-size: 1.1em;
+                        }
+
+ .drittel .iconbox{
+                        width:110px;
+                         height:110px;
+                        }
+                
+  .iconbox i{
+                            font-size:4em;
+                        }
+  #what-i-do p{
+      margin:5%;
+  }  
+   
+  .bars{
+      width:35%;
+      }
+
+      .links-to-bars {
+        width:70%;
+
+        }                   
+        .projekte .twoinarow li{
+         width:80%;
+        margin:0% 10% 2% 10%;
+
+        }
+    
+        .threeinarow li:nth-child(3), .projekte .twoinarow li:nth-child(2){
+            margin:0% 10% 2% 10%;
+        }
+
+
+     
+
+
+
+        footer{
+            padding:100px;
+        }
+footer .innerbox{
+    padding:60px;
+}
+               ul#rechtliches li{
+           margin-right:5px;
+               }
+
+           
+           ul#social{
+           float:left;
+           text-align:left;
+           margin-top: 30px;
+               }
+           ul#social li{
+                   margin-right:10px;
+               }
+
+
+  }/*ende Breakpoint bis 736px*/
+
+
+  @media 
+  only screen and (max-width: 601px) {
+
+    
+
+    #coffee #Logoexplain .Text, 
+    #candles #Logoexplain .Text, 
+    #Airtaxi #Logoexplain .Text, 
+    #drone #Logoexplain .Text {
+        width:90%;
+        float:none;
+        margin:5% 5% 5% 5%;
+        text-align: center;
+        }
+    #coffee #Logoexplain .Image, 
+    #candles #Logoexplain .Image, 
+    #Airtaxi #Logoexplain .Image, 
+    #drone #Logoexplain .Image {
+            width:100%;
+            float:none;
+            }
+
+   #Umsetzung ul li {
+
+                width:90%;
+                float:none;
+                margin:5%;
+              }
+              #Umsetzung li:last-child{
+                margin-right:5%;
+            }
+
+            .gallery-cell {
+               height: 40vh;
+              }
+            .testimonial {
+                padding:0 20px;  
+                margin: 50px auto 190px auto;
+          
+            }
+
+
+                  .bars{
+                    width:32%;
+                    margin-left:2%;
+                    margin-top: 5%;
+                    }
+              
+                    .links-to-bars {
+                      width:55%;
+                 margin: 23% 1% 1% 7%;
+               
+                    }
+                    .links-to-bars1{
+                        margin-top:0;
+                    }
+
+                    .single-progress{
+                        margin-bottom:30%;
+                        margin-top:31%;
+                      
+                   }
+       
+       .progress {
+       height: 25px;
+       margin: 5% 0 5% 0;
+       
+       }
+       
+       .progress-bar {
+       height: 100%;
+       font-size: 8px;
+       line-height: 8px;
+       
+       }     
+
+                    .knopka{
+                        margin:49% 2% 35% 2%;
+                      width:130px;
+                      }
+ 
+
+                      .marketing .knopka{
+                        left:45%;
+                        top:90%;
+                       }
+
+
+                       .marketing .knopka{
+
+                        margin:7px 7px 25px 7px;
+                        padding:0.9em;
+                       }
+                       #contact .knopka{
+                        margin:5% 35%;
+                        background-color: #C9B218;
+                        color: #2b2823;
+                    }
+     
+                    
+                   
+                    
+
+                                    
+
+
+  
+
+   
+  }/*ende Breakpoint bis 601px*/
+
+
+
+  @media 
+  only screen and (max-width: 565px) {
+ 
+        header nav ul li {
+            margin-right:15px;
+        }
+
+          #Index .dunkel .row li{
+           margin:0% 10% 0% 10%;
+           padding:20px;
+             }
+
+
+#Index .dunkel .row li:last-child{
+                 margin:10%;
+              }
+
+            
+                       ul#social li i{
+                           font-size:0.8em;}    
+
+
+                           .figure-1 figcaption{
+                             font-size: 0.8em;
+                            width:100%;
+                            height:100%;
+                            background:rgba(0, 0, 0, 0.6);
+                            color:#fff;
+                            position:absolute;
+                            left:0%;
+                        right:50%;
+                        bottom:0px;
+                        top:0px;
+                        -webkit-transition: all 0.7s ease-in-out;
+                        -moz-transition: all 0.7s ease-in-out;
+                        -ms-transition: all 0.7s ease-in-out;
+                        -o-transition: all 0.7s ease-in-out;
+                        transition: all 0.7s ease-in-out;
+                        }
+  }/*ende Breakpoint bis 565px*/
+
+
+  @media 
+  only screen and (max-width: 416px) {
+    #hero h1 span.heading{
+        font-size:2em;
+        }
+
+
+
+#hero h1 span.claim{
+            font-size:0.4em;
+               }
+               #hero1 h1, #hero2 h1, #hero3 h1, #hero4 h1, #hero5 h1, #hero6 h1, #hero7 h1 {
+                font-size:1.6em;
+                letter-spacing: 3px;
+                font-family: 'Corinthia', sans-serif;
+                color: rgba(243, 230, 230, 0.8);
+                margin:0;
+                position:absolute;
+                top:50%;
+                left:50%;
+             transform:translate(-50%, -50%);
+             text-align:center;
+                }
+            
+               #herobox1{
+                height: 25vh;  
+                   }
+
+                   .parent{
+                    height: 25vh;  
+                }
+ 
+
+.testimonial-quote {
+                font-size:1.1em;
+              }
+  
+              .gallery-cell {
+                height: 40vh;
+               }       
+
+
+.testimonial-author {
+                font-size: 0.6em;
+              }
+
+
+
+              .knopka{
+                margin:32% 2% 10% 1%;
+              width:100px;
+              font-size: 0.8em;
+              }
+
+              .links-to-bars1{
+                margin-top:30%;
+            }
+              .bars{
+                width:25%;
+                margin-left:2%;
+                margin-top: 13%;
+                }
+          
+                .links-to-bars {
+                  width:68%;
+                  margin:2% 0 2% 2%;
+                }
+
+   
+                .single-progress{
+                     margin-bottom:30%;
+                     margin-top:30%;
+                }
+
+.progress {
+    height: 25px;
+    margin: 5% 0 5% 0;
+  
+  }
+  
+  .progress-bar {
+    height: 100%;
+    font-size: 8px;
+    line-height: 8px;
+  
+  }                
+ 
+ 
+  .bars h3{
+      font-size:1.1em;
+      padding:1%;
+      margin:5%;
+  }
+  .bars label{
+    font-size: 0.7em;
+    padding:2%;
+    margin:2% 0 0 0;
+
+}
+
+
+.marketing .knopka{
+
+    margin:7px 7px 25px 7px;
+    padding:1em;
+   }
+
+   .halbeweb{
+     width:80%;
+     margin:0% 10% 0% 10%;
+ }
+ ul#social li i{
+    font-size:1.5em;}
+    ul#social li{
+        margin-left:20px;
+    }
+
+
+      .flickity-prev-next-button svg{
+        width:30%;
+        height:30%;
+    }       
+
+  
+h2{
+      font-size:1.5em;
+}
+
+    footer{
+        padding:120px 10px 120px 10px ;
+    }
+ 
+    ul#rechtliches{
+        text-align:left;
+        float:left;
+           }
+           ul#rechtliches li{
+       display:inline-block;
+       margin-right:10px;
+           }
+
+       
+       ul#social{
+       float:left;
+       text-align:left;
+           }
+       ul#social li{
+               display:inline-block;
+               margin-right:10px;
+           }
+
+           
+
+  }/*ende Breakpoint bis 414px*/
+
+  
+  @media 
+  only screen and (max-width: 377px) {
+ 
+
+          #hero1 h1, #hero2 h1, #hero3 h1, #hero4 h1, #hero5 h1, #hero6 h1, #hero7 h1 {
+            font-size:1.3em;
+            }
+.drittel{
+    font-size:1em;
+}
+     
+.gallery-cell {
+    height: 47vh;
+   }   
+
+.flickity-prev-next-button svg{
+    width:30%;
+    height:30%;
+}       
+
+
+.single-progress{
+    margin-bottom:40%;
+    margin-top:40%;
+
+}
+.links-to-bars {
+    width:59%;
+margin: 15% 5% 1% 2%;
+
+  }
+  .bars{
+    width:28%;
+    margin-left:2%;
+    margin-top: 16%;
+    }
+    .knopka{
+        margin:40% 2% 10% 1%;
+      width:100px;
+      }
+
+      ul#rechtliches li a, ul#social li a {
+       
+        padding: 10%;
+        margin: 10% 15%;}
+                     
+                       ul#social li i{
+                           font-size:2em;  }
+
+
+                
+                           
+                        .scroll-to-top{
+                            padding:2px 2px;
+                        }
+                        
+ 
+      
+  }/*ende Breakpoint bis 375px*/
+
+
+  @media 
+  only screen and (max-width: 321px) {
+ 
+             
+        header nav ul li {
+            margin-right:3px;
+        }
+        
+
+
+ #hero h1 span.heading{
+            font-size:1.5em;
+            }
+#hero h1 span.claim{
+            font-size:0.3em;
+               }
+        
+               .gallery-cell {
+                height: 60vh;
+               }   
+            
+
+              .knopka{
+                padding:0.8em ;  
+                font-size: 0.6em;
+                width:80px;
+                margin:30% 2% 60% 2%;
+                border:1px solid;
+              }
+        
+           
+
+.progress {
+    height: 20px;
+    margin: 10% 0 5% 0;
+  
+  }
+  .bars{
+    width:30%;
+  
+    }
+
+    .links-to-bars {
+      width:61%;
+      margin:2% 0 1% 1%;
+    }
+
+    .links-to-bars1{
+        margin-top:50%;
+    }
+              
+ .marketing .knopka{
+                    left:45%;
+                    top:90%;
+                   }
+
+                   #scroll-to-top{
+        
+                    padding:2px 5px;}
+
+                    .single-progress{
+                        margin-bottom:30%;
+                        margin-top:26%;
+                    
+                    }
+          
+                    
+
+
+                                         
+   
+                   
+      footer {
+        padding: 60px 10px 120px 10px;}
+
+      ul#rechtliches li a, ul#social li a {
+       
+        padding: 10%;
+        margin: 10% 15%;}
+
+        ul#rechtliches li {
+            display: inline-block;
+            margin: 5% 5%;}
+                     
+                       ul#social li i{
+                           font-size:1.3em;  }
+
+  }/*ende Breakpoint bis 320px*/
+  
+  @media 
+  only screen and (max-height: 481px) {
+
+    .gallery-cell {
+        height: 70vh;
+       }  
+
+  
+       
+     }/*ende Breakpoint bis 320px*/

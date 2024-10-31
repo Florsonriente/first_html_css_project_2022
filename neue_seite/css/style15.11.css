@@ -1,0 +1,752 @@
+@import url(normalize.css);
+@import url(lightbox.min.css);
+@import url(all.css);
+*{
+    box-sizing:border-box;
+}
+
+*:active, *:focus{
+    outline: none;
+    outline:0;
+  }
+
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+   
+    text-decoration: none;
+    list-style: none;
+ 
+}
+
+html,body {
+    overflow-x: hidden;
+
+    width:100%;
+      position:relative;
+   
+}
+
+
+      /*GALERIE VERSUCH*/
+    
+  #korobka{
+    position:relative;
+    line-height:0;
+    height:100vh;
+    }
+
+    ul {    padding-inline-start: 0px!important;
+      list-style-type: disc;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    
+    
+    }
+
+
+
+.door {
+  position: relative;
+  cursor: pointer;
+}
+
+.door h1{
+  position: absolute;
+  top:15%;
+  left:50%;
+  z-index: 2;
+  transform:translate(-50%, -50%);
+  color:rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size:140px;
+  text-align: center;
+  font-weight: 50;
+  opacity: 0.3;
+}
+
+.door-front, .door-front h1{
+
+  transform-origin: left;
+  position: absolute;
+  z-index:1;
+  transition: .5s;
+ }
+
+
+.door:hover h1 {
+ /* opacity: 0; */
+}
+
+
+
+
+.door-front{
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  transform-origin: left;
+  position: absolute;
+  z-index:1;
+  transition: .5s;
+ }
+
+.door-front:before, .door-front:after {
+ /* content: url(../gallery/deer.jpg);*/
+  background-image: url(../gallery/all.jpg);
+  background-size: cover;
+  display: inline-block;
+  width: 100%; 
+  height: 100%;
+  content:"";
+}
+
+.door:hover .door-front {
+  transform: rotateY(-160deg); 
+}
+
+
+
+.door-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+ 
+
+  /* content: url(../gallery/deer.jpg);*/
+}
+
+
+.kalender{
+  overflow:hidden;
+}
+
+.kalender li {
+float:left;
+max-width:16.6%;
+padding:0;
+margin:0;
+line-height: 0;
+background: #1f1d1c;
+
+
+}
+.kalender li img{
+  max-width:100%;
+
+}
+
+.door-front1,.door-front2, .door-front3, .door-front4, .door-front5, .door-front6, .door-front7, .door-front8, .door-front9, .door-front10, .door-front11, .door-front11, .door-front12, .door-front13, .door-front14, .door-front15, .door-front16,
+.door-front17, .door-front18, .door-front19, .door-front20, .door-front21, .door-front22, .door-front23, .door-front24, .door-front25{
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+  transform-origin: left;
+  position: absolute;
+  z-index:1;
+  transition: .5s;
+  
+ }
+.door:hover .door-front1, .door:hover .door-front2,.door:hover .door-front3, .door:hover .door-front4, .door:hover .door-front5, .door:hover .door-front6, .door:hover .door-front7,
+.door:hover .door-front8, .door:hover .door-front9, .door:hover .door-front10, .door:hover .door-front11, .door:hover .door-front12, 
+.door:hover .door-front13, .door:hover .door-front14, .door:hover .door-front15, .door:hover .door-front16, .door:hover .door-front17,
+.door:hover .door-front18, .door:hover .door-front19, .door:hover .door-front20,
+.door:hover .door-front21, .door:hover .door-front22, .door:hover .door-front23, .door:hover .door-front24, .door:hover .door-front25  {
+  transform: rotateY(-160deg); 
+
+}
+.door:hover .door-front4, .door:hover .door-front5, .door:hover .door-front6, .door:hover .door-front7,
+.door:hover .door-front8, .door:hover .door-front9, .door:hover .door-front10, .door:hover .door-front11, .door:hover .door-front12, 
+.door:hover .door-front13, .door:hover .door-front14, .door:hover .door-front15, .door:hover .door-front16, .door:hover .door-front17,
+.door:hover .door-front18, .door:hover .door-front19, .door:hover .door-front20,
+.door:hover .door-front21, .door:hover .door-front22, .door:hover .door-front23, .door:hover .door-front24   {
+
+  pointer-events: none!important;
+}
+
+.door-front1:before, .door-front1:after {
+ /* content: url(../gallery/deer.jpg);*/
+  background-image: url(../gallery/image_part_001.jpg);
+  background-size: cover;
+  display: inline-block;
+  width: 100%; 
+  height: 100%;
+  content:"";
+  
+}
+.door-front2:before, .door-front2:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_002.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front3:before, .door-front3:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_003.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front4:before, .door-front4:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_004.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+
+ .door-front5:before, .door-front5:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_005.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front6:before, .door-front6:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_006.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front7:before, .door-front7:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_007.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front8:before, .door-front8:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_008.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front9:before, .door-front9:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_009.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front10:before, .door-front10:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_010.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front11:before, .door-front11:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_011.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front12:before, .door-front12:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_012.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front13:before, .door-front13:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_013.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front14:before, .door-front14:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_014.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front15:before, .door-front15:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_015.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front16:before, .door-front16:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_016.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front17:before, .door-front17:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_017.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front18:before, .door-front18:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_018.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front19:before, .door-front19:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_019.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front20:before, .door-front20:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_020.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front21:before, .door-front21:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_021.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front22:before, .door-front22:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_022.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front23:before, .door-front23:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_023.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+ .door-front24:before, .door-front24:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_024.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+
+ .door-front25:before, .door-front25:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/image_part_024.jpg);
+   background-size: cover;
+   display: inline-block;
+   width: 100%; 
+   height: 100%;
+   content:"";
+ }
+#merry{
+  display: none;
+ }
+
+ .snowfall{
+  background: url(https://i.imgur.com/T0mBFg2.png);
+  background-size: 350px 200px;
+  background-repeat: repeat;
+  height: 100%;
+  width:100%;
+  position:relative;
+  
+  
+ /*b z-index:100000;
+
+  order-radius: 50%;
+  top:100px;*/
+  animation:snowfall 5s linear forwards infinite; 
+  -webkit-animation:snowfall 5s linear forwards infinite; 
+}
+@keyframes snowfall{
+  0%{
+    background-position: 0 0;
+  }
+  20%{
+    background-position: 20px 20px;
+  }
+  40%{
+    background-position: 40px 40px;
+  }
+  60%{
+    background-position: 60px 60px;
+  }
+  80%{
+    background-position: 80px 80px;
+  }
+  100%{
+    background-position: 100px 100px;
+  }
+}
+@-webkit-keyframes snowfall{
+  0%{
+    background-position: 0 0;
+  }
+  20%{
+    background-position: 20px 20px;
+  }
+  40%{
+    background-position: 40px 40px;
+  }
+  60%{
+    background-position: 60px 60px;
+  }
+  80%{
+    background-position: 80px 80px;
+  }
+  100%{
+    background-position: 100px 100px;
+  }
+}
+
+@media 
+only screen and (max-width: 1200px) {
+
+  .door h1{
+    font-size:100px;
+  }   
+
+    
+  
+  }
+
+
+
+@media 
+only screen and (max-width: 1035px) {
+
+  /*.kalender{
+    max-height:100vh;
+    }*/
+
+  .door h1{
+    font-size:100px;
+  }   
+
+    .kalender li {
+      max-width:20%;   
+  }
+  
+  .door-front1:before, .door-front1:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/train2/image_part_001.jpg);
+  }
+  .door-front2:before, .door-front2:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_002.jpg);
+  }
+  .door-front3:before, .door-front3:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_003.jpg);
+  }
+  .door-front4:before, .door-front4:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_004.jpg);
+  }
+  
+  .door-front5:before, .door-front5:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_005.jpg);
+  }
+  .door-front6:before, .door-front6:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_006.jpg);
+  }
+  .door-front7:before, .door-front7:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_007.jpg);
+  }
+  .door-front8:before, .door-front8:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_008.jpg);
+  }
+  .door-front9:before, .door-front9:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_009.jpg);
+  }
+  .door-front10:before, .door-front10:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_010.jpg);
+  }
+  .door-front11:before, .door-front11:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_011.jpg);
+  }
+  .door-front12:before, .door-front12:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_012.jpg);
+  }
+  .door-front13:before, .door-front13:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_013.jpg);
+  }
+  .door-front14:before, .door-front14:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_014.jpg);
+  }
+  .door-front15:before, .door-front15:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_015.jpg);
+  }
+  .door-front16:before, .door-front16:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_016.jpg);
+  }
+  .door-front17:before, .door-front17:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_017.jpg);
+  }
+  .door-front18:before, .door-front18:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_018.jpg);
+  
+  }
+  .door-front19:before, .door-front19:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_019.jpg);
+  }
+  .door-front20:before, .door-front20:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_020.jpg);
+  }
+  .door-front21:before, .door-front21:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_021.jpg);
+  }
+  .door-front22:before, .door-front22:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_022.jpg);
+  }
+  .door-front23:before, .door-front23:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_023.jpg);
+  }
+  .door-front24:before, .door-front24:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/train2/image_part_024.jpg);
+  }
+  .door-front25:before, .door-front25:after {
+    /* content: url(../gallery/deer.jpg);*/
+     background-image: url(../gallery/train2/image_part_025.jpg);
+   }
+  #merry{
+    display:block;
+   }
+  
+  }
+  
+  
+
+@media 
+only screen and (max-width: 900px) {
+  .door h1{
+    font-size:80px;
+  } 
+    
+}
+
+
+@media only screen and (max-width: 736px) {
+
+  .door h1{
+    font-size:60px;
+  } 
+ 
+
+
+  }
+
+
+  @media 
+  only screen and (max-width: 601px) {
+
+    .kalender li {
+            max-width:25%;   
+      }
+      #merry{
+        display: none;
+       }
+
+      .door-front1:before, .door-front1:after {
+        /* content: url(../gallery/deer.jpg);*/
+         background-image: url(../gallery/dog/image_part_001.jpg);
+       }
+       .door-front2:before, .door-front2:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_002.jpg);
+        }
+        .door-front3:before, .door-front3:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_003.jpg);
+        }
+        .door-front4:before, .door-front4:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_004.jpg);
+        }
+       
+        .door-front5:before, .door-front5:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_005.jpg);
+        }
+        .door-front6:before, .door-front6:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_006.jpg);
+        }
+        .door-front7:before, .door-front7:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_007.jpg);
+        }
+        .door-front8:before, .door-front8:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_008.jpg);
+        }
+        .door-front9:before, .door-front9:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_009.jpg);
+        }
+        .door-front10:before, .door-front10:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_010.jpg);
+        }
+        .door-front11:before, .door-front11:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_011.jpg);
+        }
+        .door-front12:before, .door-front12:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_012.jpg);
+        }
+        .door-front13:before, .door-front13:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_013.jpg);
+        }
+        .door-front14:before, .door-front14:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_014.jpg);
+        }
+        .door-front15:before, .door-front15:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_015.jpg);
+        }
+        .door-front16:before, .door-front16:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_016.jpg);
+        }
+        .door-front17:before, .door-front17:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_017.jpg);
+        }
+        .door-front18:before, .door-front18:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_018.jpg);
+
+        }
+        .door-front19:before, .door-front19:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_019.jpg);
+        }
+        .door-front20:before, .door-front20:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_020.jpg);
+        }
+        .door-front21:before, .door-front21:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_021.jpg);
+        }
+        .door-front22:before, .door-front22:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_022.jpg);
+        }
+        .door-front23:before, .door-front23:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_023.jpg);
+        }
+        .door-front24:before, .door-front24:after {
+         /* content: url(../gallery/deer.jpg);*/
+          background-image: url(../gallery/dog/image_part_024.jpg);
+        }
+
+   
+  }
+
+
+  @media 
+  only screen and (max-width: 520px) {
+    
+    .door h1{
+      font-size:60px;
+    } 
+   
+     }
+     @media 
+     only screen and (max-width: 450px) {
+       
+       .door h1{
+         font-size:40px;
+       } 
+      
+        }
+        @media 
+        only screen and (max-width: 450px) {
+          
+          .door h1{
+            font-size:25px;
+          } 
+         
+           }

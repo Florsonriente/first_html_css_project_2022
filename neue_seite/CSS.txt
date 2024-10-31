@@ -1,0 +1,104 @@
+.kalender li {
+      max-width:25%;   
+    
+  }
+  
+  
+  .door-front1:before, .door-front1:after {
+  /* content: url(../gallery/deer.jpg);*/
+   background-image: url(../gallery/dekor/image_part_001.jpg);
+  }
+  .door-front2:before, .door-front2:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_002.jpg);
+  }
+  .door-front3:before, .door-front3:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_003.jpg);
+  }
+  .door-front4:before, .door-front4:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_004.jpg);
+  }
+  
+  .door-front5:before, .door-front5:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_005.jpg);
+  }
+  .door-front6:before, .door-front6:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_006.jpg);
+  }
+  .door-front7:before, .door-front7:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_007.jpg);
+  }
+  .door-front8:before, .door-front8:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_008.jpg);
+  }
+  .door-front9:before, .door-front9:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_009.jpg);
+  }
+  .door-front10:before, .door-front10:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_010.jpg);
+  }
+  .door-front11:before, .door-front11:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_011.jpg);
+  }
+  .door-front12:before, .door-front12:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_012.jpg);
+  }
+  .door-front13:before, .door-front13:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_013.jpg);
+  }
+  .door-front14:before, .door-front14:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_014.jpg);
+  }
+  .door-front15:before, .door-front15:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_015.jpg);
+  }
+  .door-front16:before, .door-front16:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_016.jpg);
+  }
+  .door-front17:before, .door-front17:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_017.jpg);
+  }
+  .door-front18:before, .door-front18:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_018.jpg);
+  
+  }
+  .door-front19:before, .door-front19:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_019.jpg);
+  }
+  .door-front20:before, .door-front20:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_020.jpg);
+  }
+  .door-front21:before, .door-front21:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_021.jpg);
+  }
+  .door-front22:before, .door-front22:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_022.jpg);
+  }
+  .door-front23:before, .door-front23:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_023.jpg);
+  }
+  .door-front24:before, .door-front24:after {
+   /* content: url(../gallery/deer.jpg);*/
+    background-image: url(../gallery/dekor/image_part_024.jpg);
+  }*/
